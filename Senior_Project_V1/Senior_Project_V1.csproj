@@ -95,10 +95,43 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Facial Recognition\FaceApiRecognizer.cs" />
+    <Compile Include="Facial Recognition\FaceApiUtils.cs" />
+    <Compile Include="Facial Recognition\FaceApiWhitelist.cs" />
+    <Compile Include="Facial Recognition\FaceRecognitionException.cs" />
+    <Compile Include="Facial Recognition\HSFace.cs" />
+    <Compile Include="Facial Recognition\HSPerson.cs" />
+    <Compile Include="Facial Recognition\IFaceRecognizer.cs" />
+    <Compile Include="Helpers\OxfordFaceAPIHelper.cs" />
+    <Compile Include="Helpers\SpeechHelper.cs" />
+    <Compile Include="Helpers\WebcamHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MusicApp.xaml.cs">
+      <DependentUpon>MusicApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Music\MenuItem.cs" />
+    <Compile Include="Music\Sound.cs" />
+    <Compile Include="Music\SoundManager.cs" />
+    <Compile Include="NewUserPage.xaml.cs">
+      <DependentUpon>NewUserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\UserProfileObject.cs" />
+    <Compile Include="Objects\Visitor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserProfilePage.xaml.cs">
+      <DependentUpon>UserProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WeatherApp.xaml.cs">
+      <DependentUpon>WeatherApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Weather\LocationManager.cs" />
+    <Compile Include="Weather\WeatherClass.cs" />
+    <Compile Include="WelcomePage.xaml.cs">
+      <DependentUpon>WelcomePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -107,6 +140,24 @@
     <None Include="Senior_Project_V1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Audio\Avicii\Addicted To You.mp3" />
+    <Content Include="Assets\Audio\Avicii\Hey Brother.mp3" />
+    <Content Include="Assets\Audio\Avicii\Wake me up.mp3" />
+    <Content Include="Assets\Audio\Others\Guts Over Fear.mp3" />
+    <Content Include="Assets\Audio\Others\Me myself and I.mp3" />
+    <Content Include="Assets\Audio\Others\Mentalism.mp3" />
+    <Content Include="Assets\Audio\Others\Middle.mp3" />
+    <Content Include="Assets\Audio\Others\You Know You Like It.mp3" />
+    <Content Include="Assets\Icon\note.png" />
+    <Content Include="Assets\Icon\note2.png" />
+    <Content Include="Assets\Images\Avicii\Addicted To You.jpg" />
+    <Content Include="Assets\Images\Avicii\Hey Brother.jpg" />
+    <Content Include="Assets\Images\Avicii\Wake me up.jpg" />
+    <Content Include="Assets\Images\Others\Guts Over Fear.jpg" />
+    <Content Include="Assets\Images\Others\Me Myself and I.jpg" />
+    <Content Include="Assets\Images\Others\Mentalism.jpg" />
+    <Content Include="Assets\Images\Others\Middle.jpg" />
+    <Content Include="Assets\Images\Others\You Know You Like It.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -125,12 +176,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="MusicApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewUserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WeatherApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WelcomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.5</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.ProjectOxford.Common">
+      <Version>2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ProjectOxford.Face">
+      <Version>1.4.0</Version>
+    </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
