@@ -16,7 +16,7 @@ namespace Senior_Project_V1.Weather
         {
             var http = new HttpClient();
 
-            var apiurl = String.Format("https://api.apixu.com/v1/forecast.json?key=9038eee216524157bfb235747181807&q={0},{1}&days=7"
+            var apiurl = String.Format("https://api.apixu.com/v1/forecast.json?key=<API_Key>&q={0},{1}&days=7"
                 , lat.ToString(), lon.ToString());
             var response = await http.GetAsync(apiurl);
             var result = await response.Content.ReadAsStringAsync();

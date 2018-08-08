@@ -6,7 +6,7 @@
     public static class GeneralConstants
     {
         //API Key here
-        public const string OxfordAPIKey = "541e48e8e0a24b408bc351241019f6ce";
+        public const string OxfordAPIKey = "<API Key>";
         //API Endpoint here
         public const string FaceAPIEndpoint = "https://westus.api.cognitive.microsoft.com/face/v1.0";
         
