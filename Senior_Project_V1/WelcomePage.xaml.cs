@@ -53,7 +53,7 @@ namespace Senior_Project_V1
             this.Frame.Navigate(typeof(MusicApp));
         }
 
-        private async void backbutton_Click(object sender, RoutedEventArgs e)
+        private void backbutton_Click(object sender, RoutedEventArgs e)
         {
       
             this.Frame.Navigate(typeof(MainPage));
