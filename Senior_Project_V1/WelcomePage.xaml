@@ -6,18 +6,220 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Light"
     Loaded="WelcomePage_Loaded">
 
-    <Grid>
-        <StackPanel>
-            <TextBlock Margin="20,20,0,0" Name="Greetings"/>
-            <Button Content="Weather" Name="weatherapp" Click="weatherapp_Click" Margin="20,20,0,0"/>
-            <Button Content="Music" Name="musicapp" Click="musicapp_Click" Margin="20,20,0,0"/>
-            <Button Content="Back" Name="backbutton" Click="backbutton_Click" Margin="20,20,0,0"/>
-        </StackPanel>
-      
-        
-        
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2.25*" />
+            <RowDefinition Height="9*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="WidgetsArea" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1.5*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <Viewbox Grid.Column="0">
+                <StackPanel x:Name="DateWeatherLocation">
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold" FontSize="72">
+                        10:00
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold" FontSize="36">
+                        Tuesday, March 6
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold" FontSize="72">
+                        63&#x00B0;
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold" FontSize="36">
+                        Clear Skies
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold" FontSize="72">
+                        San Jose
+                    </TextBlock>
+                </StackPanel>
+            </Viewbox>
+
+            <Viewbox Grid.Column="1">
+                <StackPanel x:Name="SomeWidget">
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Possible place for widgets" />
+                </StackPanel>
+            </Viewbox>
+
+            <Viewbox Grid.Column="2">
+                <StackPanel x:Name="Notifications">
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="100" FontWeight="Black">
+                        Notifications from Apps
+                    </TextBlock>
+                </StackPanel>
+            </Viewbox>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="8*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+
+                <Viewbox Grid.Row="0" Margin="0, 10">
+                    <StackPanel>
+                        <Button Name="calendarApp" Click="">
+                            Calender
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="1" Margin="0, 10">
+                    <StackPanel>
+                        <Button Name="weatherapp" Click="weatherapp_Click">
+                            Weather
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="2">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="3">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="4">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="5">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="6">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="7">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="8">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+
+                <Viewbox Grid.Row="0">
+                    <StackPanel>
+                        <Button Name="musicApp" Click="musicapp_Click">
+                            Music
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="1">
+                    <StackPanel>
+                        <Button Name="newsApp" Click="">
+                            News
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="2">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="3">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="4">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="5">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="6">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="7">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Row="8">
+                    <StackPanel>
+                        <Button Click="">
+                            App
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
